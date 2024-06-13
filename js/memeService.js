@@ -1,5 +1,6 @@
 'use strict'
 
+
 var gMeme = {
     selectedImgId: 1,
     selectedLineIdx: 0,
@@ -7,7 +8,12 @@ var gMeme = {
         {
             txt: 'Your Text',
             size: 20,
-            color: 'red'
+            color: 'black'
+        },
+        {
+            txt: 'Your Text',
+            size: 20,
+            color: 'black'
         }
     ]
 }

@@ -17,18 +17,25 @@
     </section>
     <section class="editor-container">
         <h3>editor-container</h3>
-        <form>        
+        <form>
             <input oninput="setLineTxt(this.value)" type="text" placeholder="Your text here">
-            </form>
+        </form>
         <div class="canvas-container">
             <canvas width="250" height="250"></canvas>
         </div>
-        <a href="#" onclick="downloadCanvas(this)" download >Download</a>
+    </section>
+    <section class="controls-container">
+        <a href="#" onclick="downloadCanvas(this)" download>Download</a>
+        <input type="color" title="text-color" class="text-color" value="#000000" name="text-color"
+            onchange="onTextColor(this.value)" />
+        <button class="inc-btn" onclick="increaseFontSize()">+</button>
+        <button class="dec-btn" onclick="decreaseFontSize()">-</button>
+
     </section>
     <script src="js/main.js"></script>
     <script src="js/memeService.js"></script>
-    <script src="js/memeController.js"></script>
     <script src="js/galleryController.js"></script>
+    <script src="js/memeController.js"></script>
 </body>
 
 </html>
