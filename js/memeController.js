@@ -4,7 +4,10 @@ function renderMeme() {
     var currMeme = getMeme()
     gCtx.clearRect(0, 0, gElCanvas.width, gElCanvas.height);
     coverCanvasWithImg(gSelctedImg)
-    drawText(currMeme.lines[currMeme.selectedLineIdx].txt, gMeme.textX, gMeme.textY, currMeme.lines[currMeme.selectedLineIdx].size)
+    currMeme.lines.forEach(function (line, index) {
+        drawText(line.txt, gMeme.textX, gMeme.textY, line.size)
+        // drawText(currMeme.lines[currMeme.selectedLineIdx].txt, gMeme.textX, gMeme.textY, currMeme.lines[currMeme.selectedLineIdx].size)
+    })
 }
 
 function drawText(text, x = 120, y = 50, fontSize = 20) {
@@ -16,7 +19,6 @@ function drawText(text, x = 120, y = 50, fontSize = 20) {
     gCtx.textBaseline = 'middle'
     gCtx.fillText(text, x, y)
     gCtx.strokeText(text, x, y)
-    // console.log('gMeme:', gMeme);
 }
 
 function onTextColor(color) {
@@ -26,15 +28,15 @@ function onTextColor(color) {
 
 
 function increaseFontSize() {
-    var currMeme = getMeme();
-    currMeme.lines[0].size += 2; // 
+    var currMeme = getMeme()
+    currMeme.lines[0].size += 2
     renderMeme();
 }
 
 function decreaseFontSize() {
-    var currMeme = getMeme();
+    var currMeme = getMeme()
     if (currMeme.lines[0].size > 2) {
-        currMeme.lines[0].size -= 2;
+        currMeme.lines[0].size -= 2
     }
     renderMeme()
 }
