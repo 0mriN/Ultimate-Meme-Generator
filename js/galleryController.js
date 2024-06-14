@@ -26,7 +26,7 @@ function coverCanvasWithImg(elImg) {
 
 function onSelectImg(elImg) {
     resetMemeText()
-    gSelctedImg = elImg
+    gSelectedImg = elImg
     coverCanvasWithImg(elImg)
     renderMeme()
 }

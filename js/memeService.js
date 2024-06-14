@@ -15,7 +15,6 @@ var gMeme = {
     ]
 }
 
-
 function getMeme() {
     return gMeme
 }
@@ -35,7 +34,7 @@ function resetMemeText() {
     })
 }
 
-function addLine(text, size, color, pos) {
+function addLine(text = 'Your Text Here', size = 20, color = 'black', pos) {
     var currMeme = getMeme()
     var lineHeight = 50
     var newY = lineHeight * (currMeme.lines.length + 1)
@@ -49,21 +48,25 @@ function addLine(text, size, color, pos) {
     })
     currMeme.selectedLineIdx = currMeme.lines.length - 1
     renderMeme()
+    clearInput()
+}
+
+function clearInput() {
+    document.querySelector('.editor-container input[type="text"]').value = ''
 }
 
 
-
 function addNewLine(ev) {
-    var text = document.querySelector('.editor-container input[type="text"]').value
-    var prevText = gMeme.lines[gMeme.selectedLineIdx].txt
+    ev.preventDefault()
+    clearInput()
+    var inputField = document.querySelector('.editor-container input[type="text"]')
+    var text = inputField.value || 'Your Text Here'
     var size = 20
-    var color = 'blue'
+    var color = 'black'
     var pos = getEvPos(ev)
 
     addLine(text, size, color, pos)
-
-    setLineTxt(prevText, 0)
-
+    text = ''
 }
 
 function getEvPos(ev) {
@@ -80,23 +83,26 @@ function getEvPos(ev) {
             x: ev.pageX - ev.target.offsetLeft - ev.target.clientLeft,
             y: ev.pageY - ev.target.offsetTop - ev.target.clientTop,
         }
-        console.log('pos:', pos)
     }
     return pos
 }
 
 function setTextDrag(isDrag) {
-    gMeme.lines.isDrag = isDrag
-    console.log('gMeme.lines.isDrag:', gMeme.lines.isDrag);
-
+    var currMeme = getMeme()
+    if (currMeme.selectedLineIdx !== -1) {
+        currMeme.lines.forEach((line, index) => {
+            line.isDrag = (index === currMeme.selectedLineIdx) && isDrag
+        })
+        renderMeme()
+    }
 }
 
 
 function switchLine() {
     var currMeme = getMeme()
-    var selectedLineIndex = currMeme.selectedLineIdx
-    currMeme.lines.forEach(function (line, index) {
-        line.isDrag = (index === selectedLineIndex)
+    currMeme.selectedLineIdx = (currMeme.selectedLineIdx + 1) % currMeme.lines.length
+    currMeme.lines.forEach((line, index) => {
+        line.isDrag = index === currMeme.selectedLineIdx
     })
-    currMeme.selectedLineIdx = (selectedLineIndex + 1) % currMeme.lines.length
+    renderMeme()
 }

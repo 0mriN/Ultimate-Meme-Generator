@@ -3,37 +3,33 @@
 function renderMeme() {
     var currMeme = getMeme()
     gCtx.clearRect(0, 0, gElCanvas.width, gElCanvas.height);
-    coverCanvasWithImg(gSelctedImg)
+    coverCanvasWithImg(gSelectedImg)
+
     currMeme.lines.forEach(function (line, index) {
-        if (line.isDrag) {
-            gCtx.lineWidth = 2
-            gCtx.strokeStyle = 'white'
-            var textWidth = gCtx.measureText(line.txt).width
-            var textHeight = gCtx.measureText(line.txt).height
-            // var textHeight = line.size
-            var x = line.pos.x - textWidth / 2 - 5
-            var y = line.pos.y - textHeight / 2 - 15
-            gCtx.strokeRect(x, y, textWidth + 10, textHeight + 10)
-            // gCtx.strokeRect(line.pos.x - 5, line.pos.y - 15, gCtx.measureText(line.txt).width + 10, line.size + 10)
-        }
-        drawText(line.txt, line.pos.x, line.pos.y, line.size)
-        // drawText(currMeme.lines[currMeme.selectedLineIdx].txt, gMeme.textX, gMeme.textY, currMeme.lines[currMeme.selectedLineIdx].size)
+        var isSelected = index === currMeme.selectedLineIdx
+        var isDragging = line.isDrag
+        drawText(line.txt, line.pos.x, line.pos.y, line.size, line.color, isSelected, isDragging)
     })
 }
 
-function drawText(text, x, y, fontSize) {
-    gCtx.lineWidth = 2
-    gCtx.strokeStyle = gMeme.lines[0].color
-    gCtx.fillStyle = gMeme.lines[0].color
-    gCtx.font = fontSize + 'px Arial'
+function drawText(text, x, y, fontSize, color, isSelected, isDrag) {
+    gCtx.font = `${fontSize}px Arial`
     gCtx.textAlign = 'center'
     gCtx.textBaseline = 'middle'
-    gCtx.fillText(text, x, y)
-    gCtx.strokeText(text, x, y)
+    gCtx.fillStyle = color
+    gCtx.fillText(text || 'Your Text Here', x, y)
+
+    if (isSelected || isDrag) {
+        gCtx.strokeStyle = 'white'
+        gCtx.lineWidth = 2
+        var textWidth = gCtx.measureText(text || 'Your Text Here').width
+        var textHeight = fontSize
+        gCtx.strokeRect(x - textWidth / 2 - 5, y - textHeight / 2 - 5, textWidth + 10, textHeight + 10)
+    }
 }
 
 function onTextColor(color) {
-    gMeme.lines[0].color = color
+    gMeme.lines[gMeme.selectedLineIdx].color = color
     renderMeme()
 }
 

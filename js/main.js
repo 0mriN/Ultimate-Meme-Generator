@@ -1,7 +1,7 @@
 'use strict'
 var gElCanvas
 var gCtx
-var gSelctedImg
+var gSelectedImg
 var gStartPos
 const TOUCH_EVS = ['touchstart', 'touchmove', 'touchend']
 
@@ -48,16 +48,14 @@ function resizeCanvas() {
 
 function onDown(ev) {
     const pos = getEvPos(ev)
-    console.log('pos', pos)
     const clickedLineIdx = isTextClicked(pos)
     if (clickedLineIdx !== -1) {
-        gMeme.selectedImgId = clickedLineIdx
+        gMeme.selectedLineIdx = clickedLineIdx
+        setTextDrag(true)
+        gStartPos = pos
+        document.body.style.cursor = 'grabbing'
         renderMeme()
     }
-
-    setTextDrag(true)
-    gStartPos = pos
-    document.body.style.cursor = 'grabbing'
 }
 
 function isTextClicked(clickedPos) {
