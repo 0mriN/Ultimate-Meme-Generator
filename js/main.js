@@ -3,6 +3,7 @@ var gElCanvas
 var gCtx
 var gSelctedImg
 var gStartPos
+const TOUCH_EVS = ['touchstart', 'touchmove', 'touchend']
 
 function onInit() {
     gElCanvas = document.querySelector('canvas')
@@ -49,7 +50,6 @@ function onDown(ev) {
     const pos = getEvPos(ev)
     console.log('pos', pos)
     const clickedLineIdx = isTextClicked(pos)
-    // if (!isTextClicked(pos)) return
     if (clickedLineIdx !== -1) {
         gMeme.selectedImgId = clickedLineIdx
         renderMeme()
