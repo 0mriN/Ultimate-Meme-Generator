@@ -14,27 +14,24 @@
         <div class="logo">Meme <br> Generator</div>
         <nav class="main-nav-container">
             <ul class="main-nav">
-                <li class="gallery"><a href=""></a>Gallery</li>
-                <li class="about"><a href=""></a>About</li>
+                <li onclick="toggleGallery()" class="gallery main-nav-link"><a href=""></a>Gallery</li>
+                <li class="about main-nav-link"><a href=""></a>About</li>
             </ul>
         </nav>
     </header>
-  <form class="search-container">
-    <input oninput="" type="search" placeholder="search">
-    <div class="filter-container">
-        <button>Funny</button>
-        <button>Animal</button>
-        <button>Men</button>
-        <button>Women</button>
-        <button>Smile</button>
-    </div>
-    <!-- <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button> -->
-  </form>
-    <section class="gallery-container gallery-layout">
-
-
-    </section>
-    <section hidden class="editor-container">
+    <form class="search-container">
+        <input oninput="" type="search" placeholder="search">
+        <div class="filter-container">
+            <button>Funny</button>
+            <button>Animal</button>
+            <button>Men</button>
+            <button>Cute</button>
+            <button>Angry</button>
+        </div>
+        <!-- <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button> -->
+    </form>
+    <section class="gallery gallery-container gallery-layout main-content "></section>
+    <section class="editor-container">
         <h3>editor-container</h3>
         <form>
             <input oninput="setLineTxt(this.value)" type="text" placeholder="Your text here">
@@ -54,10 +51,10 @@
         </div>
     </section>
     <footer class="main-footer">
-        <small class="footer-rights">all rights reserved 2024</small>
+        <small class="footer-rights">Made by Omri Nadav</small>
         <ul class="footer-social">
-            <li><a href="">facebook</a></li>
-            <li><a href="">whatsapp</a></li>
+            <!-- <li><a href="">facebook</a></li>
+            <li><a href="">whatsapp</a></li> -->
         </ul>
     </footer>
     <script src="js/main.js"></script>

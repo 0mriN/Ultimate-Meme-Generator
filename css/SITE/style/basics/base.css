@@ -33,7 +33,7 @@ canvas {
     margin: 0;
     position: relative;
     align-items: center;
-    gap:10px
+    gap: 10px
 }
 
 input[type="search"] {
@@ -48,43 +48,54 @@ input[type="search"]::placeholder {
     font-size: 1.3125em;
     font-family: poppins;
     font-weight: 300;
-    padding:30px;
+    padding: 30px;
 }
 
 
-.filter-container{
-    background-color:grey ;
+.filter-container {
+    background-color: grey;
     width: 40vw;
     height: 5vh;
     border-radius: 30px;
     align-items: center;
     justify-content: center;
     border: none;
-padding:10px
+    padding: 10px
 }
 
 .filter-container button {
-    border:none;
-    align-self:center;
+    border: none;
+    align-self: center;
     background-color: transparent;
     color: white;
     outline: none;
-
+    cursor: pointer;
+    
+    }
+    
+    .filter-container button:hover {
+        background-color: #777;
+    }
+    
+.hidden {
+    display: none;
 }
 
-
+.editor-container {
+    display: none;
+}
 
 /* button[type="submit"] { */
-    /* position: absolute;
+/* position: absolute;
     right: 5px;
     top: 50%;
     transform: translateY(-50%);
     background-color: #22252c;
     border: none;
     cursor: pointer; */
-    /* background-color: #22252c;
+/* background-color: #22252c;
     border: none;
     cursor: pointer;
     padding: 10px; /* Adjust padding as needed */
-    /* background-image: linear-gradient(-86deg, #33bd6d 0%, #0b97b9 100%); */
-/* } */ 
+/* background-image: linear-gradient(-86deg, #33bd6d 0%, #0b97b9 100%); */
+/* } */
