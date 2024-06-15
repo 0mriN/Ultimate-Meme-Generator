@@ -14,8 +14,8 @@
         <div class="logo">Meme <br> Generator</div>
         <nav class="main-nav-container">
             <ul class="main-nav">
-                <li onclick="toggleGallery()" class="gallery main-nav-link"><a href=""></a>Gallery</li>
-                <li class="about main-nav-link"><a href=""></a>About</li>
+                <li onclick="toggleGallery()" class="gallery main-nav-link li-active"><a href=""></a>Gallery</li>
+                <li onclick="toggleAbout()" class="about main-nav-link"><a href=""></a>About</li>
             </ul>
         </nav>
     </header>
@@ -30,8 +30,8 @@
         </div>
         <!-- <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button> -->
     </form>
-    <section class="gallery gallery-container gallery-layout main-content "></section>
-    <section class="editor-container">
+    <section class="gallery-container gallery-layout main-content "></section>
+    <section class="editor-container editor-layout">
         <h3>editor-container</h3>
         <form>
             <input oninput="setLineTxt(this.value)" type="text" placeholder="Your text here">

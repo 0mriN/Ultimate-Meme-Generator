@@ -70,19 +70,22 @@ input[type="search"]::placeholder {
     color: white;
     outline: none;
     cursor: pointer;
-    
-    }
-    
-    .filter-container button:hover {
-        background-color: #777;
-    }
-    
-.hidden {
-    display: none;
+
+}
+
+.filter-container button:hover {
+    background-color: #777;
 }
 
 .editor-container {
     display: none;
+}
+
+.li-active {
+    width:116px;
+    border-radius: 20px;
+    background-color: #fefefe;
+    color:#21ac91 !important
 }
 
 /* button[type="submit"] { */

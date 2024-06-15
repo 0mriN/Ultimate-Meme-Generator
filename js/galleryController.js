@@ -44,7 +44,6 @@ function onSelectImg(elImg) {
     var galleryContainer = document.querySelector('.gallery-container')
     var searchContainer = document.querySelector('.search-container')
     galleryContainer.style.display = 'none'
-    galleryContainer.classList.remove('active-link')
     searchContainer.style.display = 'none'
     var editorContainer = document.querySelector('.editor-container')
     editorContainer.style.display = 'block'
@@ -52,6 +51,12 @@ function onSelectImg(elImg) {
     gSelectedImg = elImg
     coverCanvasWithImg(elImg)
     renderMeme()
+    var galleryLi = document.querySelector('.gallery');
+    var aboutLi = document.querySelector('.about');
+    galleryLi.classList.remove('li-active');
+    aboutLi.classList.remove('li-active');
+
+
 }
 
 function toggleGallery() {
@@ -61,6 +66,17 @@ function toggleGallery() {
     searchContainer.style.display = 'flex'
     var editorContainer = document.querySelector('.editor-container')
     editorContainer.style.display = 'none'
+    var galleryLi = document.querySelector('.gallery');
+    var aboutLi = document.querySelector('.about');
+    aboutLi.classList.remove('li-active');
+    galleryLi.classList.add('li-active');
 }
 
-// elImg.classList.add('hidden') // doit to all the imgs when u click an img
+
+function toggleAbout() {
+    var aboutLi = document.querySelector('.about');
+    aboutLi.classList.add('li-active');
+    var galleryLi = document.querySelector('.gallery');
+    galleryLi.classList.remove('li-active');
+
+}

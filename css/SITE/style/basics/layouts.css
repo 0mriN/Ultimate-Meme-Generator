@@ -29,3 +29,9 @@
     display: block;
 }
 
+/* editor-layout */
+
+.editor-layout {
+    display:flex;
+    
+}
