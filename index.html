@@ -4,16 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="styleSheet" href="css/main.css">
+    <link rel="styleSheet" href="css/SITE/style/main.css">
+    <script src="https://kit.fontawesome.com/75e189641f.js" crossorigin="anonymous"></script>
     <title>Meme-Generator</title>
 </head>
 
-<body onload="onInit()">
-    <section class="gallery-container">
-        <h3>gallery-container</h3>
+<body class="main-layout" onload="onInit()">
+    <header class="main-header full">
+        <div class="logo">Meme <br> Generator</div>
+        <nav class="main-nav-container">
+            <ul class="main-nav">
+                <li class="gallery"><a href=""></a>Gallery</li>
+                <li class="about"><a href=""></a>About</li>
+            </ul>
+        </nav>
+    </header>
+  <form class="search-container">
+    <input oninput="" type="search" placeholder="search">
+    <div class="filter-container">
+        <button>Funny</button>
+        <button>Animal</button>
+        <button>Men</button>
+        <button>Women</button>
+        <button>Smile</button>
+    </div>
+    <!-- <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button> -->
+  </form>
+    <section class="gallery-container gallery-layout">
+
 
     </section>
-    <section class="editor-container">
+    <section hidden class="editor-container">
         <h3>editor-container</h3>
         <form>
             <input oninput="setLineTxt(this.value)" type="text" placeholder="Your text here">
@@ -21,17 +42,24 @@
         <div class="canvas-container">
             <canvas width="250" height="250"></canvas>
         </div>
-    </section>
-    <section class="controls-container">
-        <a href="#" onclick="downloadCanvas(this)" download>Download</a>
-        <input type="color" title="text-color" class="text-color" value="#000000" name="text-color"
-            onchange="onTextColor(this.value)" />
-        <button class="inc-btn" onclick="increaseFontSize()">+</button>
-        <button class="dec-btn" onclick="decreaseFontSize()">-</button>
-        <button class="switch-btn" onclick="switchLine()">Switch Line</button>
-        <button class="add" onclick="addNewLine(event)">Add Line</button>
+        <div class="controls-container">
+            <a href="#" onclick="downloadCanvas(this)" download>Download</a>
+            <input type="color" title="text-color" class="text-color" value="#000000" name="text-color"
+                onchange="onTextColor(this.value)" />
+            <button class="inc-btn" onclick="increaseFontSize()">+</button>
+            <button class="dec-btn" onclick="decreaseFontSize()">-</button>
+            <button class="switch-btn" onclick="switchLine()">Switch Line</button>
+            <button class="add" onclick="addNewLine(event)">Add Line</button>
 
+        </div>
     </section>
+    <footer class="main-footer">
+        <small class="footer-rights">all rights reserved 2024</small>
+        <ul class="footer-social">
+            <li><a href="">facebook</a></li>
+            <li><a href="">whatsapp</a></li>
+        </ul>
+    </footer>
     <script src="js/main.js"></script>
     <script src="js/memeService.js"></script>
     <script src="js/galleryController.js"></script>

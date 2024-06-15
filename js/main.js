@@ -10,6 +10,7 @@ function onInit() {
     gCtx = gElCanvas.getContext('2d')
     renderGallery()
     addListeners()
+    resizeCanvas()
 }
 
 function downloadCanvas(elLink) {
@@ -21,12 +22,11 @@ function downloadCanvas(elLink) {
 function addListeners() {
     addMouseListeners()
     addTouchListeners()
-    window.addEventListener('resize', () => {
-        resizeCanvas()
+    // window.addEventListener('resize', () => {
+    //     resizeCanvas()
         renderMeme()
-    })
+    // })
 }
-
 
 function addMouseListeners() {
     gElCanvas.addEventListener('mousedown', onDown)

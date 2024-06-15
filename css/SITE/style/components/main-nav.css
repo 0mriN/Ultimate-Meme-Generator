@@ -1,0 +1,10 @@
+.main-nav>li {
+    margin-inline: 20px;
+}
+
+.main-nav li  {
+    color: #ffff
+}
+.main-nav li:hover  {
+    color:black
+}

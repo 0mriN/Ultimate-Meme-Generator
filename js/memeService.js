@@ -55,7 +55,6 @@ function clearInput() {
     document.querySelector('.editor-container input[type="text"]').value = ''
 }
 
-
 function addNewLine(ev) {
     ev.preventDefault()
     clearInput()
@@ -96,7 +95,6 @@ function setTextDrag(isDrag) {
         renderMeme()
     }
 }
-
 
 function switchLine() {
     var currMeme = getMeme()

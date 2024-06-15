@@ -1,0 +1,31 @@
+.main-layout {
+    display: grid;
+    grid-template-columns: minmax(2px, 10px) auto minmax(2px, 10px);
+}
+
+.main-layout>* {
+    grid-column: 2;
+    background-color: #383b42;
+    ;
+}
+
+.main-layout>.full {
+    grid-column: 1/-1;
+}
+
+/* gallery-layout */
+
+.gallery-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+
+.gallery-layout img {
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+}
+

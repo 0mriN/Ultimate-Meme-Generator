@@ -33,7 +33,6 @@ function onTextColor(color) {
     renderMeme()
 }
 
-
 function increaseFontSize() {
     var currMeme = getMeme()
     var selectedLineIdx = currMeme.selectedLineIdx

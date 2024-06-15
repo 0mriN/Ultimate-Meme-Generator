@@ -1,7 +1,23 @@
 'use strict'
 var gImgs = [
     { id: 1, url: 'meme-imgs/meme-imgs (square)/1.jpg', keywords: ['angry'] },
-    { id: 2, url: 'meme-imgs/meme-imgs (square)/2.jpg', keywords: ['cute,puppy,puppies'] }
+    { id: 2, url: 'meme-imgs/meme-imgs (square)/2.jpg', keywords: ['cute,puppy,puppies'] },
+    { id: 2, url: 'meme-imgs/meme-imgs (square)/3.jpg', keywords: ['cute,puppy,puppies'] },
+    { id: 2, url: 'meme-imgs/meme-imgs (square)/4.jpg', keywords: ['cute,puppy,puppies'] },
+    { id: 2, url: 'meme-imgs/meme-imgs (square)/5.jpg', keywords: ['cute,puppy,puppies'] },
+    { id: 2, url: 'meme-imgs/meme-imgs (square)/6.jpg', keywords: ['cute,puppy,puppies'] },
+    { id: 2, url: 'meme-imgs/meme-imgs (square)/7.jpg', keywords: ['cute,puppy,puppies'] },
+    { id: 2, url: 'meme-imgs/meme-imgs (square)/8.jpg', keywords: ['cute,puppy,puppies'] },
+    { id: 2, url: 'meme-imgs/meme-imgs (square)/9.jpg', keywords: ['cute,puppy,puppies'] },
+    { id: 2, url: 'meme-imgs/meme-imgs (square)/10.jpg', keywords: ['cute,puppy,puppies'] },
+    { id: 2, url: 'meme-imgs/meme-imgs (square)/11.jpg', keywords: ['cute,puppy,puppies'] },
+    { id: 2, url: 'meme-imgs/meme-imgs (square)/12.jpg', keywords: ['cute,puppy,puppies'] },
+    { id: 2, url: 'meme-imgs/meme-imgs (square)/13.jpg', keywords: ['cute,puppy,puppies'] },
+    { id: 2, url: 'meme-imgs/meme-imgs (square)/14.jpg', keywords: ['cute,puppy,puppies'] },
+    { id: 2, url: 'meme-imgs/meme-imgs (square)/15.jpg', keywords: ['cute,puppy,puppies'] },
+    { id: 2, url: 'meme-imgs/meme-imgs (square)/16.jpg', keywords: ['cute,puppy,puppies'] },
+    { id: 2, url: 'meme-imgs/meme-imgs (square)/17.jpg', keywords: ['cute,puppy,puppies'] },
+    { id: 2, url: 'meme-imgs/meme-imgs (square)/18.jpg', keywords: ['cute,puppy,puppies'] }
 ]
 
 function renderGallery() {

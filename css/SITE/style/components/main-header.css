@@ -1,0 +1,25 @@
+
+.main-header {
+    height: 73px;
+    width:auto;
+    display:flex;
+    font-size: 1.375rem;
+    background-image: linear-gradient(-86deg, #33bd6d 0%, #0b97b9 100%);
+   justify-content:space-between ;
+   align-items:center ;
+   padding:10px;
+   border-radius: 36px;
+   margin:10px
+}
+
+ ul{
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+    display: flex;
+    gap:60px;
+}
+
+.main-header li{
+    font-size: 1.3125rem;
+}
