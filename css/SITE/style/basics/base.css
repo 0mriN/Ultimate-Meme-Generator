@@ -12,46 +12,6 @@ body {
     background-color: #22252c;
 }
 
-.canvas-container {
-    background-color: lightgray;
-    width: 80vw;
-    padding: 20px;
-    margin: auto;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
-
-canvas {
-    background-color: #fff;
-    border: 1px solid black;
-}
-
-.search-container {
-    display: flex;
-    padding: 10px;
-    margin: 0;
-    position: relative;
-    align-items: center;
-    gap: 10px
-}
-
-input[type="search"] {
-
-    width: 40vw;
-    height: 5vh;
-    border-radius: 30px;
-    background-color: #22252c;
-}
-
-input[type="search"]::placeholder {
-    font-size: 1.3125em;
-    font-family: poppins;
-    font-weight: 300;
-    padding: 30px;
-}
-
-
 .filter-container {
     background-color: grey;
     width: 40vw;
@@ -82,10 +42,49 @@ input[type="search"]::placeholder {
 }
 
 .li-active {
-    width:116px;
+    width: 116px;
     border-radius: 20px;
     background-color: #fefefe;
-    color:#21ac91 !important
+    color: #21ac91 !important
+}
+
+.search-container {
+    display: flex;
+    padding: 10px;
+    margin: 0;
+    position: relative;
+    align-items: center;
+    gap: 10px
+}
+
+input[type="search"] {
+    width: 40vw;
+    height: 5vh;
+    border-radius: 30px;
+    background-color: #22252c;
+}
+
+input[type="search"]::placeholder {
+    font-size: 1.3125em;
+    font-family: poppins;
+    font-weight: 300;
+    padding: 30px;
+}
+
+.upload-container {
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.file-input-btn {
+    width: 100vw;
+    height: 3vh;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 10px;
+    border-radius: 30px;
 }
 
 /* button[type="submit"] { */

@@ -29,38 +29,77 @@
             <button>Angry</button>
         </div>
         <!-- <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button> -->
-    </form>
-    <section class="gallery-container gallery-layout main-content "></section>
-    <section class="editor-container editor-layout">
-        <h3>editor-container</h3>
-        <form>
-            <input oninput="setLineTxt(this.value)" type="text" placeholder="Your text here">
         </form>
-        <div class="canvas-container">
+        <div class="upload-container">
+            <input type="file" class="file-input-btn" name="image" onchange="onImgInput(event)" accept="image/*" />
+        </div>
+    <section class="gallery-container gallery-layout main-content ">
+    </section>
+    <section class="editor-container editor-layout">
+        <div class="canvas-container ">
             <canvas width="250" height="250"></canvas>
         </div>
         <div class="controls-container">
-            <a href="#" onclick="downloadCanvas(this)" download>Download</a>
+            <form>
+                <input class="text-input" oninput="setLineTxt(this.value)" type="text" placeholder="Your text here">
+            </form>
+
+            <button type="switch" onclick="switchLine()" title="Switch Line">
+                <i class="switch-btn fa-solid fa-arrow-right-arrow-left"></i>
+            </button>
+
+            <button type="add" onclick="addNewLine(event)" title="Add Line">
+                <i class="add-btn fa-solid fa-square-plus"></i>
+            </button>
+
+            <button type="delete" onclick="deleteLine()" title="Delete Line">
+                <i class="del-btn fa-solid fa-trash"></i>
+            </button>
+
+            <button type="increase" onclick="increaseFontSize()" title="Increase Font">
+                <i class="inc-btn fa-solid fa-a"></i>+
+            </button>
+
+            <button type="decrease" onclick="decreaseFontSize()" title="Decrease Font">
+                <i class="dec-btn fa-solid fa-a"></i>-
+            </button>
+
+            <button type="align-left" onclick="textAlignLeft()" title="Align Left">
+                <i class="left-btn fa-solid fa-align-left"></i>
+            </button>
+
+            <button type="align-center" onclick="textAlignCenter()" title="Align Center">
+                <i class="center-btn fa-solid fa-align-justify"></i>
+            </button>
+            
+            <button type="align-right" onclick="textAlignRight()" title="Align Right">
+                <i class="right-btn fa-solid fa-align-right"></i>
+            </button>
+
+            <a href="#" onclick="downloadCanvas(this)" download title="Download">
+                <i class="download-btn fa-solid fa-download"></i>
+            </a>
             <input type="color" title="text-color" class="text-color" value="#000000" name="text-color"
                 onchange="onTextColor(this.value)" />
-            <button class="inc-btn" onclick="increaseFontSize()">+</button>
-            <button class="dec-btn" onclick="decreaseFontSize()">-</button>
-            <button class="switch-btn" onclick="switchLine()">Switch Line</button>
-            <button class="add" onclick="addNewLine(event)">Add Line</button>
+
+            <button type="share" onclick="onUploadImg()" title="Share on facebook">
+                <i class="del-btn fa-brands fa-facebook"></i>
+            </button>
+
 
         </div>
     </section>
     <footer class="main-footer">
         <small class="footer-rights">Made by Omri Nadav</small>
         <ul class="footer-social">
-            <!-- <li><a href="">facebook</a></li>
-            <li><a href="">whatsapp</a></li> -->
         </ul>
     </footer>
     <script src="js/main.js"></script>
     <script src="js/memeService.js"></script>
     <script src="js/galleryController.js"></script>
     <script src="js/memeController.js"></script>
+    <script src="js/share.js"></script>
+    <script src="js/upload.js"></script>
 </body>
 
 </html>

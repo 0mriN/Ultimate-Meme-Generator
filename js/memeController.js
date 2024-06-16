@@ -48,3 +48,9 @@ function decreaseFontSize() {
     }
     renderMeme()
 }
+
+function deleteLine() {
+    if (gMeme.lines.length === 0) return
+    gMeme.lines.splice(gMeme.selectedLineIdx, 1)
+    renderMeme()
+}

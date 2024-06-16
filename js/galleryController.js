@@ -43,10 +43,12 @@ function coverCanvasWithImg(elImg) {
 function onSelectImg(elImg) {
     var galleryContainer = document.querySelector('.gallery-container')
     var searchContainer = document.querySelector('.search-container')
+    var uploadContainer = document.querySelector('.upload-container')
+    uploadContainer.style.display = 'block'
     galleryContainer.style.display = 'none'
     searchContainer.style.display = 'none'
     var editorContainer = document.querySelector('.editor-container')
-    editorContainer.style.display = 'block'
+    editorContainer.style.display = 'grid'
     resetMemeText()
     gSelectedImg = elImg
     coverCanvasWithImg(elImg)
@@ -62,6 +64,8 @@ function onSelectImg(elImg) {
 function toggleGallery() {
     var galleryContainer = document.querySelector('.gallery-container')
     var searchContainer = document.querySelector('.search-container')
+    var uploadContainer = document.querySelector('.upload-container')
+    uploadContainer.style.display = 'none'
     galleryContainer.style.display = 'grid'
     searchContainer.style.display = 'flex'
     var editorContainer = document.querySelector('.editor-container')
