@@ -4,7 +4,7 @@
 
 .main-layout {
     display: grid;
-    grid-template-columns: minmax(2px, 10px) auto minmax(2px, 10px);
+    grid-template-columns: minmax(2px, 0.625rem) auto minmax(2px, 0.625rem);
 }
 
 .main-layout>* {
@@ -22,14 +22,14 @@
 .gallery-layout {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
-    gap: 10px;
-    padding: 10px;
+    gap: 0.625rem;
+    padding: 0.625rem;
 }
 
 
 .gallery-layout img {
     width: 100%;
-    border-radius: 20px;
+    border-radius: 1.25rem;
 }
 
 /* editor-layout */
@@ -37,35 +37,31 @@
 .editor-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    justify-items:center;
+    gap: 1.25rem;
+    justify-items: center;
     align-items: center;
-    padding:10px;
+    padding: 0.625rem;
 }
 
 .canvas-container {
     background-color: #22252c;
     width: 35vw;
-    padding: 20px;
+    padding: 1.25rem;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 1.25rem;
 }
 
 .controls-container {
     display: grid;
-    gap:0.625rem;
-    width:100%;
+    gap: 0.625rem;
+    width: 100%;
     max-width: 22rem;
     margin: 1.25rem 0;
     background-color: #22252c;
     align-items: center;
-    border-radius: 20px;
-    padding:5px;
+    border-radius: 1.25rem;
+    padding: 0.3125rem;
 }
-
-
-
-

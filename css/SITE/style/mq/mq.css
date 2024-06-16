@@ -1,0 +1,47 @@
+/* mobile */
+
+@media (max-width:540px) {
+    .editor-layout {
+        display: grid;
+        grid-template-columns: 1fr
+    }
+
+    .canvas-container {
+        width: 70vw;
+    }
+
+    .filter-container {
+        overflow: hidden;
+    }
+}
+
+/* small */
+
+@media (min-width:540px) {
+    .editor-layout {
+        display: grid;
+        grid-template-columns: 1fr
+    }
+
+    .canvas-container {
+        width: 50vw;
+        max-width: 80vw;
+    }
+
+    .filter-container {
+        overflow: hidden;
+    }
+}
+
+/* medium +*/
+
+@media (min-width:840px) {
+    .editor-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .controls-container {
+        max-width: 60vw
+    }
+}
