@@ -21,6 +21,8 @@
     grid-column: 3;
     border: none;
     cursor: pointer;
+    color: white;
+    background-color: lightblue;
     /* grid-area: sw; */
 }
 
@@ -32,6 +34,8 @@
     grid-column: 4;
     border: none;
     cursor: pointer;
+    color:white;
+    background-color: lightgreen;
     /* grid-area: a; */
 }
 
@@ -43,6 +47,8 @@
     grid-column: 5;
     border: none;
     cursor: pointer;
+    color:white;
+    background-color:red
     /* grid-area: d; */
 }
 
@@ -103,14 +109,17 @@
 
 
 .download-btn {
+    align-self: center;
+    justify-self: center;
     width: 50px;
     height: 50px;
     border-radius: 20px;
-    grid-row: 4;
-    grid-column: 5;
+    grid-row: 1;
+    grid-column: 6;
     background-color: white;
     border: none;
     cursor: pointer;
+    background-color:white
     /* grid-area: dw; */
 }
 
@@ -130,7 +139,7 @@
     height: 50px;
     border-radius: 20px;
     grid-row: 4;
-    grid-column: 3;
+    grid-column: 6;
     border: none;
     cursor: pointer;
 }
@@ -143,6 +152,8 @@
     grid-column: 4;
     border: none;
     cursor: pointer;
+    color:white;
+    background-color:blue
     /* grid-area:sh */
 }
 
@@ -151,8 +162,22 @@
     height: 50px;
     border-radius: 20px;
     grid-row: 4;
+    grid-column: 3;
+    border: none;
+    cursor: pointer;
+    color:white;
+    background-color:rgb(92, 92, 2)
+    /* grid-area:sv; */
+}
+
+.whatsapp-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    grid-row: 4;
     grid-column: 5;
     border: none;
     cursor: pointer;
-    /* grid-area:sv; */
+    color:white;
+    background-color:green
 }

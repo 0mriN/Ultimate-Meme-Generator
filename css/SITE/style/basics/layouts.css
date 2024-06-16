@@ -40,6 +40,7 @@
     gap: 20px;
     justify-items:center;
     align-items: center;
+    padding:10px;
 }
 
 .canvas-container {
@@ -55,19 +56,14 @@
 
 .controls-container {
     display: grid;
-    /* grid-template-columns:1fr 1fr 1fr 1fr 1fr ;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
-    grid-template-areas: 
-    "s s s s s"
-    "c sw a d d"
-    "i dc ml mc mr"
-    "sv sv sh dw dw";
     gap:0.625rem;
-    /* width:100%; */
-    /* max-width: 18.75rem; */
+    width:100%;
+    max-width: 22rem;
     margin: 1.25rem 0;
     background-color: #22252c;
     align-items: center;
+    border-radius: 20px;
+    padding:5px;
 }
 
 

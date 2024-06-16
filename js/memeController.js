@@ -38,6 +38,7 @@ function onStrokeColor(strokeColor) {
     gMeme.lines[gMeme.selectedLineIdx].strokeColor = strokeColor
     renderMeme()
 }
+
 function increaseFontSize() {
     var currMeme = getMeme()
     var selectedLineIdx = currMeme.selectedLineIdx
