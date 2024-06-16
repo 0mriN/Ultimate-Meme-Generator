@@ -1,0 +1,158 @@
+.text-input {
+    width: 30vw;
+    height: 5vh;
+    border-radius: 20px;
+
+    /* grid-area: t; */
+}
+
+.search-bar {
+    grid-column: 2/6;
+    grid-row: 1;
+    border: none;
+    cursor: pointer;
+}
+
+.switch-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    grid-row: 2;
+    grid-column: 3;
+    border: none;
+    cursor: pointer;
+    /* grid-area: sw; */
+}
+
+.add-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    grid-row: 2;
+    grid-column: 4;
+    border: none;
+    cursor: pointer;
+    /* grid-area: a; */
+}
+
+.del-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    grid-row: 2;
+    grid-column: 5;
+    border: none;
+    cursor: pointer;
+    /* grid-area: d; */
+}
+
+.inc-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    grid-row: 3;
+    grid-column: 2;
+    border: none;
+    cursor: pointer;
+    /* grid-area: i; */
+}
+
+.dec-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    grid-row: 3;
+    grid-column: 3;
+    border: none;
+    cursor: pointer;
+    /* grid-area: dc; */
+}
+
+.left-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    grid-row: 3;
+    grid-column: 4;
+    border: none;
+    cursor: pointer;
+    /* grid-area: ml; */
+}
+
+.center-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    grid-row: 3;
+    grid-column: 5;
+    border: none;
+    cursor: pointer;
+    /* grid-area: mc; */
+}
+
+.right-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    grid-row: 3;
+    grid-column: 6;
+    border: none;
+    cursor: pointer;
+    /* grid-area: mr; */
+}
+
+
+.download-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    grid-row: 4;
+    grid-column: 5;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    /* grid-area: dw; */
+}
+
+.color-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    grid-row: 4;
+    grid-column: 2;
+    border: none;
+    cursor: pointer;
+    /* grid-area: c; */
+}
+
+.stroke-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    grid-row: 4;
+    grid-column: 3;
+    border: none;
+    cursor: pointer;
+}
+
+.share-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    grid-row: 4;
+    grid-column: 4;
+    border: none;
+    cursor: pointer;
+    /* grid-area:sh */
+}
+
+.save-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    grid-row: 4;
+    grid-column: 5;
+    border: none;
+    cursor: pointer;
+    /* grid-area:sv; */
+}

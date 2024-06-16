@@ -53,33 +53,23 @@
     border-radius: 20px;
 }
 
-canvas {
-    background-color: #fff;
-    border: 1px solid black;
-    width: 100%;
-    height: 100%;
-    display: grid;
-}
-
 .controls-container {
     display: grid;
+    /* grid-template-columns:1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
     grid-template-areas: 
-    s ;
+    "s s s s s"
+    "c sw a d d"
+    "i dc ml mc mr"
+    "sv sv sh dw dw";
     gap:0.625rem;
-    width:100%;
-    max-width: 18.75rem;
+    /* width:100%; */
+    /* max-width: 18.75rem; */
     margin: 1.25rem 0;
     background-color: #22252c;
+    align-items: center;
 }
 
 
-.controls-container button {
-    /* padding: 10px; */
-    /* background-color: #4CAF50; */
-    /* color: white; */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
 

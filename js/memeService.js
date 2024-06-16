@@ -9,6 +9,7 @@ var gMeme = {
             txt: 'Your Text',
             size: 20,
             color: 'black',
+            strokeColor:'black',
             pos: { x: 120, y: 40 },
             isDrag: false
         }

@@ -8,17 +8,18 @@ function renderMeme() {
     currMeme.lines.forEach(function (line, index) {
         var isSelected = index === currMeme.selectedLineIdx
         var isDragging = line.isDrag
-        drawText(line.txt, line.pos.x, line.pos.y, line.size, line.color, isSelected, isDragging)
+        drawText(line.txt, line.pos.x, line.pos.y, line.size, line.color, line.strokeColor, isSelected, isDragging)
     })
 }
 
-function drawText(text, x, y, fontSize, color, isSelected, isDrag) {
+function drawText(text, x, y, fontSize, color, strokeColor, isSelected, isDrag) {
     gCtx.font = `${fontSize}px Arial`
     gCtx.textAlign = 'center'
     gCtx.textBaseline = 'middle'
+    gCtx.strokeStyle = strokeColor
     gCtx.fillStyle = color
     gCtx.fillText(text || 'Your Text Here', x, y)
-
+    gCtx.strokeText(text || 'Your Text Here', x, y)
     if (isSelected || isDrag) {
         gCtx.strokeStyle = 'white'
         gCtx.lineWidth = 2
@@ -33,6 +34,10 @@ function onTextColor(color) {
     renderMeme()
 }
 
+function onStrokeColor(strokeColor) {
+    gMeme.lines[gMeme.selectedLineIdx].strokeColor = strokeColor
+    renderMeme()
+}
 function increaseFontSize() {
     var currMeme = getMeme()
     var selectedLineIdx = currMeme.selectedLineIdx
@@ -53,4 +58,8 @@ function deleteLine() {
     if (gMeme.lines.length === 0) return
     gMeme.lines.splice(gMeme.selectedLineIdx, 1)
     renderMeme()
+}
+
+function saveMeme() {
+    console.log('hello');
 }

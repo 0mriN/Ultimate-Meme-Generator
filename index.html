@@ -29,10 +29,10 @@
             <button>Angry</button>
         </div>
         <!-- <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button> -->
-        </form>
-        <div class="upload-container">
-            <input type="file" class="file-input-btn" name="image" onchange="onImgInput(event)" accept="image/*" />
-        </div>
+    </form>
+    <div class="upload-container">
+        <input type="file" class="file-input-btn" name="image" onchange="onImgInput(event)" accept="image/*" />
+    </div>
     <section class="gallery-container gallery-layout main-content ">
     </section>
     <section class="editor-container editor-layout">
@@ -40,50 +40,59 @@
             <canvas width="250" height="250"></canvas>
         </div>
         <div class="controls-container">
-            <form>
+            <form class="search-bar">
                 <input class="text-input" oninput="setLineTxt(this.value)" type="text" placeholder="Your text here">
             </form>
 
-            <button type="switch" onclick="switchLine()" title="Switch Line">
-                <i class="switch-btn fa-solid fa-arrow-right-arrow-left"></i>
+            <button type="switch" class="switch-btn" onclick="switchLine()" title="Switch Line">
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
             </button>
 
-            <button type="add" onclick="addNewLine(event)" title="Add Line">
-                <i class="add-btn fa-solid fa-square-plus"></i>
+            <button type="add" class="add-btn" onclick="addNewLine(event)" title="Add Line">
+                <i class="fa-solid fa-square-plus"></i>
             </button>
 
-            <button type="delete" onclick="deleteLine()" title="Delete Line">
-                <i class="del-btn fa-solid fa-trash"></i>
+            <button type="delete" class="del-btn" onclick="deleteLine()" title="Delete Line">
+                <i class="fa-solid fa-trash"></i>
             </button>
 
-            <button type="increase" onclick="increaseFontSize()" title="Increase Font">
-                <i class="inc-btn fa-solid fa-a"></i>+
+            <button type="increase" class="inc-btn" onclick="increaseFontSize()" title="Increase Font">
+                <i class="fa-solid fa-a"></i>+
             </button>
 
-            <button type="decrease" onclick="decreaseFontSize()" title="Decrease Font">
-                <i class="dec-btn fa-solid fa-a"></i>-
+            <button type="decrease" class="dec-btn" onclick="decreaseFontSize()" title="Decrease Font">
+                <i class="fa-solid fa-a"></i>-
             </button>
 
-            <button type="align-left" onclick="textAlignLeft()" title="Align Left">
-                <i class="left-btn fa-solid fa-align-left"></i>
+            <button type="align-left" class="left-btn" onclick="textAlignLeft()" title="Align Left">
+                <i class="fa-solid fa-align-left"></i>
             </button>
 
-            <button type="align-center" onclick="textAlignCenter()" title="Align Center">
-                <i class="center-btn fa-solid fa-align-justify"></i>
-            </button>
-            
-            <button type="align-right" onclick="textAlignRight()" title="Align Right">
-                <i class="right-btn fa-solid fa-align-right"></i>
+            <button type="align-center" class="center-btn" onclick="textAlignCenter()" title="Align Center">
+                <i class="fa-solid fa-align-justify"></i>
             </button>
 
-            <a href="#" onclick="downloadCanvas(this)" download title="Download">
-                <i class="download-btn fa-solid fa-download"></i>
-            </a>
-            <input type="color" title="text-color" class="text-color" value="#000000" name="text-color"
+            <button type="align-right" class="right-btn" onclick="textAlignRight()" title="Align Right">
+                <i class="fa-solid fa-align-right"></i>
+            </button>
+            <div class="download-btn">
+
+                <a href="#" class="download" onclick="downloadCanvas(this)" download title="Download">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+            <input type="color" title="text-color" class="color-btn" value="#000000" name="text-color"
                 onchange="onTextColor(this.value)" />
 
-            <button type="share" onclick="onUploadImg()" title="Share on facebook">
-                <i class="del-btn fa-brands fa-facebook"></i>
+            <input type="color" title="stroke-color" class="stroke-btn" value="#000000" name="stroke-color"
+                onchange="onStrokeColor(this.value)" />
+
+            <button type="share" class="share-btn" onclick="onUploadImg()" title="Share on facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </button>
+
+            <button type="save" class="save-btn" onclick="saveMeme()" title="Save your meme!">
+                <i class="fa-solid fa-floppy-disk"></i>
             </button>
 
 

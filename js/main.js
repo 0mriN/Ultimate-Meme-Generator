@@ -53,7 +53,7 @@ function onDown(ev) {
         gMeme.selectedLineIdx = clickedLineIdx
         setTextDrag(true)
         gStartPos = pos
-        document.body.style.cursor = 'grabbing'
+        document.body.style.cursor = 'move'
         renderMeme()
     }
 }
@@ -97,7 +97,7 @@ function onMove(ev) {
 function onUp(ev) {
     setTextDrag(false)
     gStartPos = null
-    document.body.style.cursor = 'grab'
+    document.body.style.cursor = 'default'
 }
 
 function moveText(dx, dy) {

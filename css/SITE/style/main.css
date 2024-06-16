@@ -1,7 +1,9 @@
 @import './basics/layouts.css';
 @import './basics/base.css';
-@import './mq/mq.css';
 @import './setup/typography.css';
 @import './components/main-header.css';
 @import './components/logo.css';
 @import './components/main-nav.css';
+@import './components/canvas.css';
+@import './components/controls.css';
+@import './mq/mq.css';
