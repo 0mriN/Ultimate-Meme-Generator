@@ -15,20 +15,34 @@
         <nav class="main-nav-container">
             <ul class="main-nav">
                 <li onclick="toggleGallery()" class="gallery main-nav-link li-active"><a href=""></a>Gallery</li>
+                <li onclick="toggleSaved()" class="saved main-nav-link"><a href=""></a>Saved</li>
                 <li onclick="toggleAbout()" class="about main-nav-link"><a href=""></a>About</li>
             </ul>
         </nav>
     </header>
     <form class="search-container">
-        <input oninput="" type="search" placeholder="search">
+        <input oninput="onSetFilter(this.value)" type="search" placeholder="search">
         <div class="filter-container">
-            <button>Funny</button>
-            <button>Animal</button>
-            <button>Men</button>
-            <button>Cute</button>
-            <button>Angry</button>
+            <button type="button" onclick="onSetFilter(this.innerText)" class="funny-filter"
+                data-clicks="0">Funny</button>
+            <button type="button" onclick="onSetFilter(this.innerText)" class="animal-filter"
+                data-clicks="0">Animal</button>
+            <button type="button" onclick="onSetFilter(this.innerText)" class="men-filter" data-clicks="0">Men</button>
+            <button type="button" onclick="onSetFilter(this.innerText)" class="cute-filter"
+                data-clicks="0">Cute</button>
+            <button type="button" onclick="onSetFilter(this.innerText)" class="angry-filter"
+                data-clicks="0">Angry</button>
         </div>
-        <!-- <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button> -->
+        <div class="toggle-container">
+            <select onchange="onSetFilter(this.value)">
+                <option value="">Select Filter</option>
+                <option value="funny">Funny</option>
+                <option value="animal">Animal</option>
+                <option value="men">Men</option>
+                <option value="cute">Cute</option>
+                <option value="angry">Angry</option>
+            </select>
+        </div>
     </form>
     <div class="upload-container">
         <input type="file" class="file-input-btn" name="image" onchange="onImgInput(event)" accept="image/*" />

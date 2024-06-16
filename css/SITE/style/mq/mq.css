@@ -11,8 +11,15 @@
     }
 
     .filter-container {
-        overflow: hidden;
+        display: none;
     }
+    .editor-container {
+        display: none;
+    }
+    .toggle-container {
+        display:flex
+    }
+
 }
 
 /* small */
@@ -31,6 +38,9 @@
     .filter-container {
         overflow: hidden;
     }
+    .editor-container {
+        display: none;
+    }
 }
 
 /* medium +*/
@@ -43,5 +53,11 @@
 
     .controls-container {
         max-width: 60vw
+    }
+    .canvas-container {
+        max-width: 450px
+    }
+    .editor-container {
+        display: none;
     }
 }
