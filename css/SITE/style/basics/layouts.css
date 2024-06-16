@@ -63,6 +63,8 @@ canvas {
 
 .controls-container {
     display: grid;
+    grid-template-areas: 
+    s ;
     gap:0.625rem;
     width:100%;
     max-width: 18.75rem;
