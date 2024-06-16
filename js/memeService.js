@@ -1,6 +1,5 @@
 'use strict'
 
-
 var gMeme = {
     selectedImgId: 1,
     selectedLineIdx: 0,
@@ -29,7 +28,7 @@ function setLineTxt(text, lineIdx) {
 }
 
 function resetMemeText() {
-    var currMeme = getMeme();
+    var currMeme = getMeme()
     currMeme.lines.forEach(function (line) {
         line.txt = ''
     })
@@ -104,4 +103,22 @@ function switchLine() {
         line.isDrag = index === currMeme.selectedLineIdx
     })
     renderMeme()
+}
+
+function saveMemes() {
+    localStorage.setItem('savedMemes', JSON.stringify(gMeme.lines))
+}
+
+function loadMemes() {
+    var savedMemes = JSON.parse(localStorage.getItem('savedMemes'))
+    console.log('savedMemes:', savedMemes)
+    if (savedMemes) {
+        gMeme.lines = savedMemes
+        console.log('Loaded memes:', gMeme.lines)
+        renderMeme()
+    }
+}
+
+function clearSavedMemes() {
+    localStorage.removeItem('savedMemes')
 }

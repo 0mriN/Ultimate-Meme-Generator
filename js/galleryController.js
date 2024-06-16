@@ -53,35 +53,53 @@ function onSelectImg(elImg) {
     gSelectedImg = elImg
     coverCanvasWithImg(elImg)
     renderMeme()
-    var galleryLi = document.querySelector('.gallery');
-    var aboutLi = document.querySelector('.about');
-    galleryLi.classList.remove('li-active');
-    aboutLi.classList.remove('li-active');
-
-
+    var galleryLi = document.querySelector('.gallery')
+    var aboutLi = document.querySelector('.about')
+    galleryLi.classList.remove('li-active')
+    aboutLi.classList.remove('li-active')
 }
 
 function toggleGallery() {
     var galleryContainer = document.querySelector('.gallery-container')
     var searchContainer = document.querySelector('.search-container')
     var uploadContainer = document.querySelector('.upload-container')
+    var editorContainer = document.querySelector('.editor-container')
     uploadContainer.style.display = 'none'
     galleryContainer.style.display = 'grid'
     searchContainer.style.display = 'flex'
-    var editorContainer = document.querySelector('.editor-container')
     editorContainer.style.display = 'none'
-    var galleryLi = document.querySelector('.gallery');
-    var aboutLi = document.querySelector('.about');
-    aboutLi.classList.remove('li-active');
-    galleryLi.classList.add('li-active');
+    var galleryLi = document.querySelector('.gallery')
+    var aboutLi = document.querySelector('.about')
+    var savedLi = document.querySelector('.saved')
+    aboutLi.classList.remove('li-active')
+    savedLi.classList.remove('li-active')
+    galleryLi.classList.add('li-active')
 }
 
 function toggleAbout() {
-    var aboutLi = document.querySelector('.about');
-    aboutLi.classList.add('li-active');
-    var galleryLi = document.querySelector('.gallery');
-    galleryLi.classList.remove('li-active');
+    var savedLi = document.querySelector('.saved')
+    var aboutLi = document.querySelector('.about')
+    aboutLi.classList.add('li-active')
+    var galleryLi = document.querySelector('.gallery')
+    galleryLi.classList.remove('li-active')
+    savedLi.classList.remove('li-active')
 
+}
+
+function toggleSaved(){
+    var galleryContainer = document.querySelector('.gallery-container')
+    var searchContainer = document.querySelector('.search-container')
+    var editorContainer = document.querySelector('.editor-container')
+    galleryContainer.style.display = 'none'
+    searchContainer.style.display = 'none'
+    editorContainer.style.display = 'none'
+    var galleryLi = document.querySelector('.gallery')
+    var aboutLi = document.querySelector('.about')
+    var savedLi = document.querySelector('.saved')
+    aboutLi.classList.remove('li-active')
+    galleryLi.classList.remove('li-active')
+    savedLi.classList.add('li-active')
+    // loadMemes()
 }
 
 function onSetFilter(filterText) {
@@ -100,7 +118,7 @@ function onSetFilter(filterText) {
         var currentClicks = parseInt(clickedButton.getAttribute('data-clicks')) || 0
         currentClicks++
         clickedButton.style.fontSize = (14 + currentClicks) + 'px'
-        clickedButton.setAttribute('data-clicks', currentClicks);
+        clickedButton.setAttribute('data-clicks', currentClicks)
     }
 }
 

@@ -2,7 +2,6 @@ function onImgInput(ev) {
     loadImageFromInput(ev, renderImg)
 }
 
-
 function loadImageFromInput(ev, onImageReady) {
     const reader = new FileReader()
     reader.onload = function (event) {

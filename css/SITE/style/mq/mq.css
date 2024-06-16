@@ -43,7 +43,15 @@
     }
 }
 
-/* medium +*/
+/* medium */
+@media (min-width:690px){
+    .saved {
+        display: none;
+    }
+}
+
+
+/* large*/
 
 @media (min-width:840px) {
     .editor-layout {
@@ -59,5 +67,9 @@
     }
     .editor-container {
         display: none;
+    }
+
+    .saved {
+        display: flex;
     }
 }

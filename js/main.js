@@ -44,6 +44,7 @@ function resizeCanvas() {
     const elContainer = document.querySelector('.canvas-container')
     gElCanvas.width = elContainer.offsetWidth
     gElCanvas.height = elContainer.offsetHeight
+    renderMeme()
 }
 
 function onDown(ev) {
@@ -60,9 +61,7 @@ function onDown(ev) {
 
 function isTextClicked(clickedPos) {
     var currMeme = getMeme()
-
     var clickedLineIndex = -1
-
     currMeme.lines.forEach(function (line, index) {
         var textWidth = gCtx.measureText(line.txt).width
         var textHeight = line.size
@@ -79,10 +78,7 @@ function isTextClicked(clickedPos) {
             clickedLineIndex = index
         }
     })
-
-
-    return clickedLineIndex;
-
+    return clickedLineIndex
 }
 
 function onMove(ev) {
@@ -107,3 +103,4 @@ function moveText(dx, dy) {
     currMeme.lines[selectedLineIdx].pos.y += dy
     renderMeme()
 }
+

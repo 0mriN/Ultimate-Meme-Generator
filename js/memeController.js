@@ -2,7 +2,7 @@
 
 function renderMeme() {
     var currMeme = getMeme()
-    gCtx.clearRect(0, 0, gElCanvas.width, gElCanvas.height);
+    gCtx.clearRect(0, 0, gElCanvas.width, gElCanvas.height)
     coverCanvasWithImg(gSelectedImg)
 
     currMeme.lines.forEach(function (line, index) {
@@ -43,7 +43,7 @@ function increaseFontSize() {
     var currMeme = getMeme()
     var selectedLineIdx = currMeme.selectedLineIdx
     currMeme.lines[selectedLineIdx].size += 2
-    renderMeme();
+    renderMeme()
 }
 
 function decreaseFontSize() {
@@ -62,5 +62,42 @@ function deleteLine() {
 }
 
 function saveMeme() {
-    console.log('hello');
+    saveMemes()
+    alert('doesnt work properly :(')
+}
+
+function textAlignLeft() {
+    alignText('left')
+}
+
+function textAlignCenter() {
+    alignText('center')
+}
+
+function textAlignRight() {
+    alignText('right')
+}
+
+function alignText(alignment) {
+    var currMeme = getMeme()
+    var selectedLineIdx = currMeme.selectedLineIdx
+    var line = currMeme.lines[selectedLineIdx]
+
+    switch (alignment) {
+        case 'left':
+            line.pos.x = 0
+            line.align = 'left'
+            break
+        case 'center':
+            line.pos.x = gElCanvas.width / 2
+            line.align = 'center'
+            break
+        case 'right':
+            line.pos.x = gElCanvas.width
+            line.align = 'right'
+            break
+        default:
+            break
+    }
+    renderMeme()
 }
